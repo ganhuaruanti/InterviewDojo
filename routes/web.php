@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// GitHub login
+Route::get('/auth/github/login', 'Socialite\\GitHubController@login');
+Route::get('/auth/github/callback', 'Socialite\\GitHubController@callback');
